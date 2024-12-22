@@ -8,7 +8,7 @@
   <style>
     body {
       font-family: 'Roboto', sans-serif;
-      background: linear-gradient(rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 0.5)), url('4542e076d34a4ca0b9cf49634438e947.jpg') no-repeat center center fixed; /* 设置背景图和渐变 */
+      background: linear-gradient(rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 0.5)), url('5e09dfea4aba11577705450921.jpg') no-repeat center center fixed; /* 设置背景图和渐变 */
       background-size: cover; /* 使背景图覆盖整个页面 */
       margin: 0;
       padding: 0;
@@ -100,17 +100,12 @@
         <font color="000000">Abstract</font>
       </h2>
       <p class="abstract-text">
-        <font color="000000"> In recent years, diffusion-based text-to-music (TTM) generation has gained prominence, offering a novel approach to synthesizing musical content from textual
-          descriptions. Achieving high accuracy and diversity in this generation process
-          requires extensive, high-quality data, which often constitutes only a fraction of
-          available datasets. Within open-source datasets, the prevalence of issues like
-          mislabeling, weak labeling, unlabeled data, and low-quality music waveform significantly hampers the development of music generation models. To overcome
-          these challenges, we introduce a novel quality-aware masked diffusion transformer
-          (QA-MDT) approach that enables generative models to discern the quality of input
-          music waveform during training. Building on the unique properties of musical
-          signals, we have adapted and implemented a MDT model for TTM task, while
-          further unveiling its distinct capacity for quality control. Moreover, we address the
-          issue of low-quality captions with a caption refinement data processing approach.</font>
+        <font color="000000"> Existing text-to-music generation models face two main limitations: they either only generate approximately 10 seconds of music, falling short of users' needs for longer compositions, or they require longer-duration datasets and increased output feature dimensions for training, leading to higher data and computational costs. 
+          We systematically explored two training-free strategies for long-duration music generation based on diffusion models. 
+          Both methods divide the task into multiple stages, with stage outputs concatenated to form the complete composition. 
+The first, called the audio-prompt-guided strategy, employs the tail of audio features from the previous stage to serve as a prefix of the current stage, using masking techniques to guide the generation of the remainder of the current stage. 
+          The second, the structure-guided strategy, leverages the structure of previous audio representations as intermediate states in the current stage generation, initiating the inference sampling process from the intermediate time step. 
+          Our experiments demonstrate that existing short-form music generation systems are capable of generating long-duration music.</font>
       </p>
       <img src="123_tmp.png" alt="PDF Image" class="pdf-image">
       <img src="update.png" alt="PDF Image" class="pdf-image">
